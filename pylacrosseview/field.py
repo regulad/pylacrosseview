@@ -8,6 +8,9 @@ class Value:
         self.value: float = value
         self.at: datetime = at
 
+    def __hash__(self):
+        return hash((self.value, self.at))
+
     def __float__(self):
         return self.value
 
@@ -22,6 +25,9 @@ class Field:
 
     def __eq__(self, other):
         return self.name == other.name and self.unit == other.unit and self.unit_enum == other.unit_enum
+
+    def __hash__(self):
+        return hash(self.name)
 
     def __str__(self):
         return self.name
