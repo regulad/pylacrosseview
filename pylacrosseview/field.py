@@ -20,6 +20,9 @@ class Field:
         self.unit: str = unit
         self.unit_enum: int = unit_enum
 
+    def __eq__(self, other):
+        return self.name == other.name and self.unit == other.unit and self.unit_enum == other.unit_enum
+
     def __str__(self):
         return self.name
 
