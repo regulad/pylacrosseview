@@ -1,13 +1,15 @@
 [tool.poetry]
 name = "pylacrosseview"
-version = "0.1.2"
-description = ""
+version = "0.1.3"
+description = "Python library that allows you to use La Crosse devices that connect with La Crosse View"
+readme = "README.md"
 authors = ["regulad <regulad@outlook.com>"]
 license = "GPLv3"
 
 [tool.poetry.dependencies]
 python = "^3.9"
 requests = "^2.27.1"
+PyJWT = {extras = ["crypto"], version = "^2.3.0"}
 
 [tool.poetry.dev-dependencies]
 
